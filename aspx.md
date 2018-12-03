@@ -2,7 +2,7 @@
 Everything in here is asp.net(Webforms) specific
 
 ## Mimetype Download
-```
+```csharp
 Response.Clear();
 Response.ContentType = MimeMapping.GetMimeMapping(Path.GetExtension(fileName));
 Response.AppendHeader("Content-Type", MimeMapping.GetMimeMapping(fileName));
@@ -15,7 +15,7 @@ Response.Flush();
 
 ## Display PDF in iFrame
 
-```
+```csharp
 //TEMP-Ordner Pfad setzen
 var virtualPath = $"~/temp/CarPool/{requestId}_{DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ss", CultureInfo.InvariantCulture)}.pdf";
 if (System.Diagnostics.Debugger.IsAttached)
