@@ -5,12 +5,12 @@ After stumbling across [Azer's](https://github.com/azer) [notebook](https://gith
 
 
 ## Code / Tech
-[aspX](aspx.md) - some Ideas and codeparts that helped me
-[C#](csharp.md) - snippets
+* [aspX](aspx.md) - some Ideas and codeparts that helped me
+* [C#](csharp.md) - snippets
 
 
 ## Life
 
 
 ## Do not fit in one category
-[Books](books.md)
+* [Books](books.md)
