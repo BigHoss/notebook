@@ -10,6 +10,7 @@ After stumbling across [Azer's](https://github.com/azer) [notebook](https://gith
 * [Code Quality](codeQuality.md)
 * [Dotnet Core](dotnetCore.md)
 * [Entity Framework](entityFramework.md)
+* [Excel](excel.md)
 
 
 ## Life
