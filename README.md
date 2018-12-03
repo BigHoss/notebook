@@ -8,6 +8,7 @@ After stumbling across [Azer's](https://github.com/azer) [notebook](https://gith
 * [aspX](aspx.md) - some Ideas and codeparts that helped me
 * [C#](csharp.md) - snippets
 * [Code Quality] (codeQuality.md)
+* [Dotnet Core](dotnetCore.md)
 
 
 ## Life
