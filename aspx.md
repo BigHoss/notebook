@@ -16,14 +16,14 @@ Response.Flush();
 ## Display PDF in iFrame
 
 ```csharp
-//TEMP-Ordner Pfad setzen
+// set temp folder
 var virtualPath = $"~/temp/CarPool/{requestId}_{DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ss", CultureInfo.InvariantCulture)}.pdf";
 if (System.Diagnostics.Debugger.IsAttached)
 virtualPath = $"~/temp/CarPool/CarPoolDemoFile.pdf";
-//Dokument generieren
-var document = Liebherr.MCCtec.CarPool.Reports.Request.GenerateDocument(requestId, employeeId, language, SaveOption.Pdf);
+// generate document
+var document = GenerateDocument(requestId, employeeId, language, SaveOption.Pdf);
 //Dokument in TEMP-Ordner schreiben
 File.WriteAllBytes(Server.MapPath(virtualPath), document);
-//PDF mit dem Viewer in einen iFrame laden
-framePreview.Src = (ApplicationConfiguration.Parameter.GetValue("PdfViewer", "Url") + virtualPath.Replace("~/temp", "").Replace("/", "%2F")).Replace("%2F%2F", "%2F");
+// load viewer with pdf file
+framePreview.Src = (PathToPdfViewer + virtualPath.Replace("~/temp", "").Replace("/", "%2F")).Replace("%2F%2F", "%2F");
 ```
