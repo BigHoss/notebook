@@ -5,13 +5,15 @@ After stumbling across [Azer's](https://github.com/azer) [notebook](https://gith
 
 
 ## Code / Tech
-* [aspX](aspx.md) - some Ideas and codeparts that helped me
-* [C#](csharp.md) - snippets
+* [aspX](aspx.md)
+* [C#](csharp.md)
 * [Code Quality](codeQuality.md)
 * [Dotnet Core](dotnetCore.md)
 * [Entity Framework](entityFramework.md)
 * [Excel](excel.md)
 * [Git](git.md)
+* [Linux & WSL](linux.md)
+* [Powershell](powershell.md)
 
 
 ## Life
