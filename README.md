@@ -11,6 +11,7 @@ After stumbling across [Azer's](https://github.com/azer) [notebook](https://gith
 * [Dotnet Core](dotnetCore.md)
 * [Entity Framework](entityFramework.md)
 * [Excel](excel.md)
+* [Git](git.md)
 
 
 ## Life
@@ -18,3 +19,5 @@ After stumbling across [Azer's](https://github.com/azer) [notebook](https://gith
 
 ## Do not fit in one category
 * [Books](books.md)
+
+
