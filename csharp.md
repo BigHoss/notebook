@@ -11,7 +11,9 @@ result = ﻿result.Where(a => a.SourceID == (int)Source.AutomaticImport).Select(
 
 
 ### EF Core Migrations
+```chsarp
 Add-Migration -Name MyMigration -OutputDir MyMigrationDir -Context MyContext -Project MyProject -StartupProject MyStartupProject
+```
 
 [Source](https://github.com/aspnet/EntityFramework/issues/4149)
 
