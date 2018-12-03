@@ -7,6 +7,7 @@ After stumbling across [Azer's](https://github.com/azer) [notebook](https://gith
 ## Code / Tech
 * [aspX](aspx.md) - some Ideas and codeparts that helped me
 * [C#](csharp.md) - snippets
+* [Code Quality] (codeQuality.md)
 
 
 ## Life
