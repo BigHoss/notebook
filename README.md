@@ -5,21 +5,25 @@ After stumbling across [Azer's](https://github.com/azer) [notebook](https://gith
 
 
 ## Code / Tech
-* [aspX](aspx.md)
-* [C#](csharp.md)
-* [Code Quality](codeQuality.md)
-* [Dotnet Core](dotnetCore.md)
-* [Entity Framework](entityFramework.md)
-* [Excel](excel.md)
-* [Git](git.md)
-* [Linux & WSL](linux.md)
-* [Powershell](powershell.md)
+Link | Description
+---- | -----------
+[aspX](aspx.md)|
+[C#](csharp.md)|
+[Code Quality](codeQuality.md)|
+[Dotnet Core](dotnetCore.md)|
+[Entity Framework](entityFramework.md)|
+[Excel](excel.md)|
+[Git](git.md)|
+[Linux & WSL](linux.md)|
+[Powershell](powershell.md)|
 
 
 ## Life
 
 
 ## Do not fit in one category
-* [Books](books.md)
-
+Link | Description
+---- | -----------
+[Books](books.md)|
+[Misc](misc.md) | Just some useful stuff
 
