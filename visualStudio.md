@@ -8,15 +8,19 @@ In diesem Feld kann man Links unten, neben dem Auswahlbereich das Flag "Use regu
  
 Regex im Visual Studio hat ein paar Grundbegriffe:
 ### Suchen:
-``.` (Punkt)    -> markiert das nächste Zeichen
-`(.*)`          -> markiert bis zum Ende des Satzes alle Zeichen
-`(.*)TEXT`      -> markiert bis zum letzten vorkommen des Wortes "TEXT" alle Zeichen. Bsp: Hallo TEXT, du bist ein TEXT-Test!
-`(.*?)`         -> markiert bis zum Ende des Satzes alle Zeichen
-`(.*?)TEXT`     -> markiert bis zum ersten vorkommen des Wortes "TEXT" alle Zeichen. Bsp: Hallo TEXT, du bist ein TEXT-Test!
-`\(` oder `\)`  -> markiert eine normale Klammer. Klammern sind Spezialzeichen im Regex, die für die Markierung verwendet werden und müssen daher speziell mit \ angeführt werden, um nicht als REGEX-Ausdruck zu gelten.
+Wert | Beschreibung
+---  | ---
+`.` (Punkt)     | markiert das nächste Zeichen
+`(.*)`          | markiert bis zum Ende des Satzes alle Zeichen
+`(.*)TEXT`      | markiert bis zum letzten vorkommen des Wortes "TEXT" alle Zeichen. Bsp: Hallo TEXT, du bist ein TEXT-Test!
+`(.*?)`         | markiert bis zum Ende des Satzes alle Zeichen
+`(.*?)TEXT`     | markiert bis zum ersten vorkommen des Wortes "TEXT" alle Zeichen. Bsp: Hallo TEXT, du bist ein TEXT-Test!
+`\(` oder `\)`  | markiert eine normale Klammer. Klammern sind Spezialzeichen im Regex, die für die Markierung verwendet werden und müssen daher speziell mit \ angeführt werden, um nicht als REGEX-Ausdruck zu gelten.
 ### Ersetzen:
-`$1` bis `$x`   -> markierte bereiche (mit .* oder .*?), wobei der index bei 1 beginnt.
-`\n`            -> fügt einen Zeilenumbruch ein.
+Wert | Beschreibung
+---  | ---
+`$1` bis `$x`   | markierte bereiche (mit .* oder .*?), wobei der index bei 1 beginnt.
+`\n`            | fügt einen Zeilenumbruch ein.
  
 Zwei praxis-Beispiele für die Anwendung von Regex:
 #### Beispiel 1: 
