@@ -1,5 +1,181 @@
 # Visual Studio 
 
+## Find and Replace with Regex
+Im Visual Studio kann mit REGEX gesucht und/oder ersetzt werden.
+Wenn man "Ctrl + H" drückt, erscheint das Feld zum suchen und ersetzen.
+ 
+In diesem Feld kann man Links unten, neben dem Auswahlbereich das Flag "Use regular expression (Hotkey: Alt + E)" auswählen.
+ 
+Regex im Visual Studio hat ein paar Grundbegriffe:
+### Suchen:
+``.` (Punkt)    -> markiert das nächste Zeichen
+`(.*)`          -> markiert bis zum Ende des Satzes alle Zeichen
+`(.*)TEXT`      -> markiert bis zum letzten vorkommen des Wortes "TEXT" alle Zeichen. Bsp: Hallo TEXT, du bist ein TEXT-Test!
+`(.*?)`         -> markiert bis zum Ende des Satzes alle Zeichen
+`(.*?)TEXT`     -> markiert bis zum ersten vorkommen des Wortes "TEXT" alle Zeichen. Bsp: Hallo TEXT, du bist ein TEXT-Test!
+`\(` oder `\)`  -> markiert eine normale Klammer. Klammern sind Spezialzeichen im Regex, die für die Markierung verwendet werden und müssen daher speziell mit \ angeführt werden, um nicht als REGEX-Ausdruck zu gelten.
+### Ersetzen:
+`$1` bis `$x`   -> markierte bereiche (mit .* oder .*?), wobei der index bei 1 beginnt.
+`\n`            -> fügt einen Zeilenumbruch ein.
+ 
+Zwei praxis-Beispiele für die Anwendung von Regex:
+#### Beispiel 1: 
+in einem switch-Case sollen die fix eingetragenen Werte mithilfe einer MetadataHelper-Klasse ausgelesen werden. Dadurch ist die Fehleranfälligkeit beim ändern der Werte oder der Namen behoben:
+```csharp
+switch (table)
+{
+    case UpdateTables.FactItemMaster:
+        return "FactItemMaster";
+    case UpdateTables.FactOffer:
+        return "FactOffer";
+    case UpdateTables.FactOfferDevice:
+        return "FactOfferDevice";
+    case UpdateTables.FactOpportunity:
+        return "FactOpportunity";
+    case UpdateTables.FactOrderBook:
+        return "FactOrderBook";
+    case UpdateTables.FactOrderIncoming:
+        return "FactOrderIncoming";
+    case UpdateTables.FactOrderTurnover:
+        return "FactOrderTurnover";
+    case UpdateTables.FactProductionVolume:
+        return "FactProductionVolume";
+    case UpdateTables.FactSpecialDirectCosts:
+        return "FactSpecialDirectCosts";
+    case UpdateTables.OrderCalculation:
+        return "OrderCalculation";
+    case UpdateTables.OrderCalculationTeamSelling:
+        return "OrderCalculationTeamSelling";
+    case UpdateTables.OrderPositionCalculation:
+        return "OrderPositionCalculation";
+    default:
+        throw new ArgumentOutOfRangeException(nameof(table), table, null);
+}
+```
+ 
+Dieser Code soll zu folgendem Code umgeschrieben werden:
+```csharp
+switch (table)
+{
+    case UpdateTables.FactItemMaster:
+        return MetadataHelper.GetTableName(typeof(DwhFactItemMaster), context);
+    case UpdateTables.FactOffer:
+        return MetadataHelper.GetTableName(typeof(DwhFactOffer), context);
+    case UpdateTables.FactOfferDevice:
+        return MetadataHelper.GetTableName(typeof(DwhFactOfferDevice), context);
+    case UpdateTables.FactOpportunity:
+        return MetadataHelper.GetTableName(typeof(DwhFactOpportunity), context);
+    case UpdateTables.FactOrderBook:
+        return MetadataHelper.GetTableName(typeof(DwhFactOrderBook), context);
+    case UpdateTables.FactOrderIncoming:
+        return MetadataHelper.GetTableName(typeof(DwhFactOrderIncoming), context);
+    case UpdateTables.FactOrderTurnover:
+        return MetadataHelper.GetTableName(typeof(DwhFactOrderTurnover), context);
+    case UpdateTables.FactProductionVolume:
+        return MetadataHelper.GetTableName(typeof(DwhFactProductionVolume), context);
+    case UpdateTables.FactSpecialDirectCosts:
+        return MetadataHelper.GetTableName(typeof(DwhFactSpecialDirectCosts), context);
+    case UpdateTables.OrderCalculation:
+        return MetadataHelper.GetTableName(typeof(DwhOrderCalculation), context);
+    case UpdateTables.OrderCalculationTeamSelling:
+        return MetadataHelper.GetTableName(typeof(DwhOrderCalculationTeamSelling), context);
+    case UpdateTables.OrderPositionCalculation:
+        return MetadataHelper.GetTableName(typeof(DwhOrderPositionCalculation), context);
+    default:
+        throw new ArgumentOutOfRangeException(nameof(table), table, null);
+}
+```
+ 
+Verwendetes Regex dafür:
+Suchen: `return "(.*?)";`
+Ersetzen: `return MetadataHelper.GetTableName(typeof(Dwh$1), context);`
+In diesem Regex wird der Text zwischen den beiden Klammern ausgewählt und im ersetzen-Teil mit dem Präfix 'Dwh' in die typeof-Methode geschrieben, die widerum in der GetTableName-Methode übergeben wird
+ 
+#### Beispiel 2: 
+In einem ASPx-Grid sollen mehrere Spalten einen Hyperlink im Datatemplate erhalten, der aus Fieldname + 'Link' besteht:
+```csharp
+<dx:GridViewDataTextColumn Caption="Produced" FieldName="Produced" VisibleIndex="4" />
+<dx:GridViewDataTextColumn Caption="Production planned" FieldName="ProductionPlanned" VisibleIndex="5" />
+<dx:GridViewDataTextColumn Caption="Total production" FieldName="ProductionTotal" VisibleIndex="6" />
+<dx:GridViewDataTextColumn Caption="Delivered" FieldName="DeliveredLink" VisibleIndex="7" />
+<dx:GridViewDataTextColumn Caption="Deliveries planned" FieldName="DeliveryPlanned" VisibleIndex="8" />
+<dx:GridViewDataTextColumn Caption="Total deliveries" FieldName="DeliveriesTotal" VisibleIndex="9" />
+<dx:GridViewDataTextColumn Caption="Current stock (finance)" FieldName="CurrentStockFinance" VisibleIndex="10" />
+<dx:GridViewDataTextColumn Caption="Current stock (incl.)" FieldName="CurrentStockIncl" ToolTip="incl. customer devices" VisibleIndex="11" />
+<dx:GridViewDataTextColumn Caption="Current stock (excl.)" FieldName="CurrentStockExcl" ToolTip="excl. customer devices" VisibleIndex="12" />
+<dx:GridViewDataTextColumn Caption="Stock end of period" FieldName="StockEndOfPeriod" VisibleIndex="13" />
+ 
+Dieser Code soll zu folgendem Code umgeschrieben werden:
+<dx:GridViewDataTextColumn Caption="Produced" FieldName="ProducedLink" VisibleIndex="4">
+    <DataItemTemplate>
+        <a href="javascript:ShowDetail('<%# Eval("ProducedLink") %>')"><%# Convert.ToInt32(Eval("Produced")) == 0 ? string.Empty : Eval("Produced") %>
+        </a>
+    </DataItemTemplate>
+</dx:GridViewDataTextColumn>
+<dx:GridViewDataTextColumn Caption="Production planned" FieldName="ProductionPlannedLink" VisibleIndex="5">
+    <DataItemTemplate>
+        <a href="javascript:ShowDetail('<%# Eval("ProductionPlannedLink") %>')"><%# Convert.ToInt32(Eval("ProductionPlanned")) == 0 ? string.Empty : Eval("ProductionPlanned") %>
+        </a>
+    </DataItemTemplate>
+</dx:GridViewDataTextColumn>
+<dx:GridViewDataTextColumn Caption="Total production" FieldName="ProductionTotalLink" VisibleIndex="6">
+    <DataItemTemplate>
+        <a href="javascript:ShowDetail('<%# Eval("ProductionTotalLink") %>')"><%# Convert.ToInt32(Eval("ProductionTotal")) == 0 ? string.Empty : Eval("ProductionTotal") %>
+        </a>
+    </DataItemTemplate>
+</dx:GridViewDataTextColumn>
+<dx:GridViewDataTextColumn Caption="Delivered" FieldName="DeliveredLinkLink" VisibleIndex="7">
+    <DataItemTemplate>
+        <a href="javascript:ShowDetail('<%# Eval("DeliveredLinkLink") %>')"><%# Convert.ToInt32(Eval("DeliveredLink")) == 0 ? string.Empty : Eval("DeliveredLink") %>
+        </a>
+    </DataItemTemplate>
+</dx:GridViewDataTextColumn>
+<dx:GridViewDataTextColumn Caption="Deliveries planned" FieldName="DeliveryPlannedLink" VisibleIndex="8">
+    <DataItemTemplate>
+        <a href="javascript:ShowDetail('<%# Eval("DeliveryPlannedLink") %>')"><%# Convert.ToInt32(Eval("DeliveryPlanned")) == 0 ? string.Empty : Eval("DeliveryPlanned") %>
+        </a>
+    </DataItemTemplate>
+</dx:GridViewDataTextColumn>
+<dx:GridViewDataTextColumn Caption="Total deliveries" FieldName="DeliveriesTotalLink" VisibleIndex="9">
+    <DataItemTemplate>
+        <a href="javascript:ShowDetail('<%# Eval("DeliveriesTotalLink") %>')"><%# Convert.ToInt32(Eval("DeliveriesTotal")) == 0 ? string.Empty : Eval("DeliveriesTotal") %>
+        </a>
+    </DataItemTemplate>
+</dx:GridViewDataTextColumn>
+<dx:GridViewDataTextColumn Caption="Current stock (finance)" FieldName="CurrentStockFinanceLink" VisibleIndex="10">
+    <DataItemTemplate>
+        <a href="javascript:ShowDetail('<%# Eval("CurrentStockFinanceLink") %>')"><%# Convert.ToInt32(Eval("CurrentStockFinance")) == 0 ? string.Empty : Eval("CurrentStockFinance") %>
+        </a>
+    </DataItemTemplate>
+</dx:GridViewDataTextColumn>
+<dx:GridViewDataTextColumn Caption="Current stock (incl.)" FieldName="CurrentStockInclLink" ToolTip="incl. customer devices" VisibleIndex="11">
+    <DataItemTemplate>
+        <a href="javascript:ShowDetail('<%# Eval("CurrentStockInclLink") %>')"><%# Convert.ToInt32(Eval("CurrentStockIncl")) == 0 ? string.Empty : Eval("CurrentStockIncl") %>
+        </a>
+    </DataItemTemplate>
+</dx:GridViewDataTextColumn>
+<dx:GridViewDataTextColumn Caption="Current stock (excl.)" FieldName="CurrentStockExclLink" ToolTip="excl. customer devices" VisibleIndex="12">
+    <DataItemTemplate>
+        <a href="javascript:ShowDetail('<%# Eval("CurrentStockExclLink") %>')"><%# Convert.ToInt32(Eval("CurrentStockExcl")) == 0 ? string.Empty : Eval("CurrentStockExcl") %>
+        </a>
+    </DataItemTemplate>
+</dx:GridViewDataTextColumn>
+<dx:GridViewDataTextColumn Caption="Stock end of period" FieldName="StockEndOfPeriodLink" VisibleIndex="13">
+    <DataItemTemplate>
+        <a href="javascript:ShowDetail('<%# Eval("StockEndOfPeriodLink") %>')"><%# Convert.ToInt32(Eval("StockEndOfPeriod")) == 0 ? string.Empty : Eval("StockEndOfPeriod") %>
+        </a>
+    </DataItemTemplate>
+</dx:GridViewDataTextColumn>
+```
+
+Verwendetes Regex dafür:
+Suchen: `<dx:(.*?)FieldName="(.*?)"(.*)/>`
+Ersetzen: `<dx:$1FieldName="$2Link"$3>\n<DataItemTemplate>\n<a href="javascript:ShowDetail('<%# Eval("$2Link") %>')"><%# Convert.ToInt32(Eval("$2")) == 0 ? string.Empty : Eval("$2") %>\n</a>\n</DataItemTemplate>\n</dx:GridViewDataTextColumn>`
+In diesem Regex werden drei Werte aus dem ursprünglichen Text ausgewählt: Der Text bis zum Fieldname, der gleich bleiben soll, der Wert des Fieldname und der Rest hinter dem Fieldname. Beim ersetzen wird der Fieldname (bsp: Produced) ersetzt durch den Fieldname mit 'Link' (bsp: ProducedLink), sowie der gesamte DataItemTemplate (inklusive Zeilenumbrüchen) geschrieben.
+ 
+Tipp für das verwenden von Regex im Visual Studio: Eine einzelne Zeile markieren, bei der Suchen+Ersetzen auswahl auf "Selection" einschränken und an dieser Zeile das Regex ausprobieren, bevor der rest markiert und ersetzt wird.
+Bei größeren ersetzungsroutinen, wie im Beispiel 2 gezeigt, lohnt es sich die Zeilen selber zu schreiben und dann den betreffenden Wert in einem Editor der Wahl durch den $x-Ausdruck zu ersetzen.
+
 
 ## Project Type Guids
 
