@@ -172,9 +172,9 @@ Dieser Code soll zu folgendem Code umgeschrieben werden:
 </dx:GridViewDataTextColumn>
 ```
 
-Verwendetes Regex dafür:
-Suchen: `<dx:(.*?)FieldName="(.*?)"(.*)/>`
-Ersetzen: `<dx:$1FieldName="$2Link"$3>\n<DataItemTemplate>\n<a href="javascript:ShowDetail('<%# Eval("$2Link") %>')"><%# Convert.ToInt32(Eval("$2")) == 0 ? string.Empty : Eval("$2") %>\n</a>\n</DataItemTemplate>\n</dx:GridViewDataTextColumn>`
+Verwendetes Regex dafür:  
+Suchen: `<dx:(.*?)FieldName="(.*?)"(.*)/>`  
+Ersetzen: `<dx:$1FieldName="$2Link"$3>\n<DataItemTemplate>\n<a href="javascript:ShowDetail('<%# Eval("$2Link") %>')"><%# Convert.ToInt32(Eval("$2")) == 0 ? string.Empty : Eval("$2") %>\n</a>\n</DataItemTemplate>\n</dx:GridViewDataTextColumn>`  
 In diesem Regex werden drei Werte aus dem ursprünglichen Text ausgewählt: Der Text bis zum Fieldname, der gleich bleiben soll, der Wert des Fieldname und der Rest hinter dem Fieldname. Beim ersetzen wird der Fieldname (bsp: Produced) ersetzt durch den Fieldname mit 'Link' (bsp: ProducedLink), sowie der gesamte DataItemTemplate (inklusive Zeilenumbrüchen) geschrieben.
  
 Tipp für das verwenden von Regex im Visual Studio: Eine einzelne Zeile markieren, bei der Suchen+Ersetzen auswahl auf "Selection" einschränken und an dieser Zeile das Regex ausprobieren, bevor der rest markiert und ersetzt wird.
