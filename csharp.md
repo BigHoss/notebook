@@ -84,8 +84,8 @@ public enum MyEnum
 <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
 <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
 ```
-https://docs.microsoft.com/en-us/visualstudio/code-quality/all-rules-rule-set
-https://stackoverflow.com/a/3179374
+[Source](https://docs.microsoft.com/en-us/visualstudio/code-quality/all-rules-rule-set)  
+[Source](https://stackoverflow.com/a/3179374)
 
 ### Connect to network shre with Credetials
 ```csharp
