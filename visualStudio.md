@@ -90,9 +90,9 @@ switch (table)
 }
 ```
  
-Verwendetes Regex dafür:
-Suchen: `return "(.*?)";`
-Ersetzen: `return MetadataHelper.GetTableName(typeof(Dwh$1), context);`
+Verwendetes Regex dafür:  
+Suchen: `return "(.*?)";`  
+Ersetzen: `return MetadataHelper.GetTableName(typeof(Dwh$1), context);`  
 In diesem Regex wird der Text zwischen den beiden Klammern ausgewählt und im ersetzen-Teil mit dem Präfix 'Dwh' in die typeof-Methode geschrieben, die widerum in der GetTableName-Methode übergeben wird
  
 #### Beispiel 2: 
