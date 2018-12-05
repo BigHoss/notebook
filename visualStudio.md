@@ -72,7 +72,7 @@
 [Source](https://www.codeproject.com/Reference/720512/List-of-Visual-Studio-Project-Type-GUIDs)
 
 
-### Build Actinos on Files
+### Build Actions on Files
 * **None:** The file is not included in the project output group and is not compiled in the build process. An example is a text file that contains documentation, such as a Readme file.
 * **Compile:** The file is compiled into the build output. This setting is used for code files.
 * **Content:** Allows you to retrieve a file (in the same directory as the assembly) as a stream via Application.GetContentStream(URI). For this method to work, it needs a AssemblyAssociatedContentFile custom attribute which Visual Studio graciously adds when you mark a file as "Content"
