@@ -87,3 +87,10 @@ public enum MyEnum
 https://docs.microsoft.com/en-us/visualstudio/code-quality/all-rules-rule-set
 https://stackoverflow.com/a/3179374
 
+### Connect to network shre with Credetials
+```csharp
+NetworkCredential theNetworkCredential = new NetworkCredential(@"domain\username", "password");
+CredentialCache theNetCache = new CredentialCache();
+theNetCache.Add(new Uri(@"\\computer"), "Basic", theNetworkCredential);
+string[] theFolders = Directory.GetDirectories(@"\\computer\share");
+```
