@@ -10,7 +10,8 @@ Awesome Library with a free book each day
 
 ## Tech Books
 
-
+* [Learning Modern 3D Graphics Programming](https://paroj.github.io/gltut/)
+* [OpenFrameworks Book](https://openframeworks.cc/ofBook/chapters/foreword.html)
 
 
 ## Fictional ??
