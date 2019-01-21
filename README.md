@@ -9,6 +9,7 @@ After stumbling across [Azer's](https://github.com/azer) [notebook](https://gith
 | -------------------------------------- | ----------- |
 | [aspX](aspx.md)                        |
 | [C#](csharp.md)                        |
+| [C++](cplusplus.md)                    |
 | [Code Quality](codeQuality.md)         |
 | [Dotnet Core](dotnetCore.md)           |
 | [Entity Framework](entityFramework.md) |
