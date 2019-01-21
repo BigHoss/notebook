@@ -2,3 +2,4 @@
 
 * [Third Party Libs](http://squall.cs.ntou.edu.tw/cpp/third-Party%20Libraries.html)
 * [JUCE](https://github.com/WeAreROLI/JUCE)
+* [OpenFrameworks](https://openframeworks.cc/ofBook/chapters/foreword.html)
