@@ -1,5 +1,8 @@
 # Visual Studio 
 
+## Links
+* [Managing Tfs Programmatically](https://www.domstamand.com/accessing-tfs-2017-programmatically/)
+
 ## Find and Replace with Regex
 Im Visual Studio kann mit REGEX gesucht und/oder ersetzt werden.
 Wenn man "Ctrl + H" drückt, erscheint das Feld zum suchen und ersetzen.
