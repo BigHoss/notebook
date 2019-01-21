@@ -17,7 +17,7 @@ After stumbling across [Azer's](https://github.com/azer) [notebook](https://gith
 | [Git](git.md)                          |
 | [Linux & WSL](linux.md)                |
 | [Powershell](powershell.md)            |
-| [Visual Studio](visualStudio.md)       |
+| [Visual Studio / Devops / Tfs](visualStudio.md)       |
 
 
 ## Life
