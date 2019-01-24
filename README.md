@@ -34,6 +34,7 @@ After stumbling across [Azer's](https://github.com/azer) [notebook](https://gith
 | Link                                   | Description |
 | -------------------------------------- | ----------- |
 | [AND.CO](www.and.co)                   | Awesome Tool to create and manage Contracts and Invoices |
+| [GitPitch](https://gitpitch.com/) | Best tool for Presentations |
 
 ## Do not fit in one category
 | Link              | Description            |
