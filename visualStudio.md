@@ -272,5 +272,5 @@ Bei größeren ersetzungsroutinen, wie im Beispiel 2 gezeigt, lohnt es sich die 
 	[Source](https://stackoverflow.com/questions/145752/what-are-the-various-build-action-settings-in-visual-studio-project-properties)
 
 
-### Nuget Teinstall
+### Nuget Reinstall
 `Update-Package -reinstall`
