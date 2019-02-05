@@ -3,6 +3,12 @@
 ## Links
 * [Managing Tfs Programmatically](https://www.domstamand.com/accessing-tfs-2017-programmatically/)
 
+
+## Change Folder Path (Default: %userprofile%\source\repos)
+Tools -> Options -> Projects and Solutions -> Locations -> Projects Location
+
+When you change that folder, also the folder in the Quick Access in any File/Folder open dialog will show that folder.
+
 ## Find and Replace with Regex
 Im Visual Studio kann mit REGEX gesucht und/oder ersetzt werden.
 Wenn man "Ctrl + H" drückt, erscheint das Feld zum suchen und ersetzen.
