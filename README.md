@@ -20,6 +20,7 @@ After stumbling across [Azer's](https://github.com/azer) [notebook](https://gith
 | [Visual Studio / Devops / Tfs](visualStudio.md)       |
 | [OSCS](https://github.com/ForrestKnight/open-source-cs) | The Open Source Computer Science Degree | 
 | [Professional Programming](https://github.com/charlax/professional-programming) | A collection of full-stack resources for programmers. |
+| [Chocolatey install Script](https://github.com/BigHoss/chocolatey-scripts)  | This is my default install for a new pc.  |
 
 ## Graphics
 | Link | Description |
