@@ -280,3 +280,12 @@ Bei größeren ersetzungsroutinen, wie im Beispiel 2 gezeigt, lohnt es sich die 
 
 ### Nuget Reinstall
 `Update-Package -reinstall`
+
+
+### Nest a File under another
+```xml
+<Compile Include="ListHeader.cs" />
+<Compile Include="ListHeader.designer.cs">
+   <DependentUpon>ListHeader.cs</DependentUpon>
+</Compile>
+```
