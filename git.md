@@ -18,3 +18,8 @@ for the active branch
 ```git
 git branch -m <newname>
 ```
+
+### Prune
+```git
+git gc --prune=now
+```
