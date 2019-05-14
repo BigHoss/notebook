@@ -11,7 +11,7 @@ dbcc checkident(table,reseed,@max)
 ## Save changes is not permitted
 If you try to change i.e. column types and you get that error message.
 
-*Tools -> Options -> Designers -> Table and Database Designers -> Prevent saving changes that require table re-creation*
+**Tools -> Options -> Designers -> Table and Database Designers -> Prevent saving changes that require table re-creation**
 
 ## Reset whole DB
 ```sql
