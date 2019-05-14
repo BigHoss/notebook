@@ -1,6 +1,6 @@
 # SQL Stuff (mainly MS SQL)
 
-### reset Idantity
+## reset Identity
 ```sql
 declare @max int;  
 select @max = max(key) from table;  
@@ -8,8 +8,12 @@ dbcc checkident(table,reseed,@max)
 ```
 [Source](http://stackoverflow.com/questions/510121/reset-autoincrement-in-sql-server-after-delete)
 
+## Save changes is not permitted
+If you try to change i.e. column types and you get that error message.
 
-### Reset whole DB
+*Tools -> Options -> Designers -> Table and Database Designers -> Prevent saving changes that require table re-creation*
+
+## Reset whole DB
 ```sql
    USE [DatabaseName]
     EXEC sp_msforeachtable "ALTER TABLE ? NOCHECK CONSTRAINT all"       -- Disable All the constraints
@@ -21,17 +25,16 @@ dbcc checkident(table,reseed,@max)
 [Source](http://stackoverflow.com/questions/510121/reset-autoincrement-in-sql-server-after-delete)
 
 
-### Restore User mapping
+## Restore User mapping
 ```sql
 EXEC sp_change_users_login auto_fix, '<DBUsername, string, user>'
 ```
 
-### Show all tables
+## Show all tables
 ```sql
 SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE='BASE TABLE'
 ```
 [Source](http://stackoverflow.com/questions/3913620/get-all-table-names-of-a-particular-database-by-sql-query)
-
 
 ### Drop all tables
 ```sql
@@ -46,15 +49,15 @@ select * from INFORMATION_SCHEMA.COLUMNS
 ```
 
 
-### DBATools in Powershell
-#### Install DbaTools
+## DBATools in Powershell
+### Install DbaTools
 `Install-Module dbatools`
 
-##### Database restore between Servers
+### Database restore between Servers
 `Copy-DbaDatabase -Source ch_kustr01\sqle2008 -Destination ch_kustr01\sqle2016 -BackupRestore -NetworkShare \\ch_kustr01\usr$ -Database %DBNAME%`
 
 
-### Set Collation of db
+## Set Collation of db
 ```sql
 ALTER DATABASE WINTRUCK63 SET SINGLE_USER WITH ROLLBACK IMMEDIATE; 
  
@@ -75,14 +78,14 @@ GO
 ```
 
 
-### Escape SQL Strings in C#
+## Escape SQL Strings in C#
 ```csharp
 System.Security.SecurityElement.Escape(STRING);
 
 System.Security.SecurityElement.FromString("<test>ESCAPEDSTRING</test>");
 ```
 
-### Division by Zero
+## Division by Zero
 ```sql
 NULLIF()
 ```
