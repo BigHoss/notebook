@@ -36,11 +36,19 @@ SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE='BASE TABLE'
 ```
 [Source](http://stackoverflow.com/questions/3913620/get-all-table-names-of-a-particular-database-by-sql-query)
 
+## Cleanup
+
 ### Drop all tables
 ```sql
 EXEC sp_msforeachtable "ALTER TABLE ? NOCHECK CONSTRAINT all"
 
 EXEC sp_MSforeachtable @command1 = "DROP TABLE ?"
+```
+
+### Truncate all tables
+```sql
+USE MyDatabase
+EXEC sp_MSforeachtable 'TRUNCATE TABLE ?'
 ```
 
 ### Export Shema
