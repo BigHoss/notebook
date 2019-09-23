@@ -33,6 +33,9 @@ After stumbling across [Azer's](https://github.com/azer) [notebook](https://gith
 
 ## Life
 
+| Link | Desciption |
+| ---- | ---------- |
+| [Parenting](parenting.md)| |
 
 ## Business
 | Link                                   | Description |
