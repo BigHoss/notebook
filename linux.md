@@ -36,3 +36,10 @@ path = /home/<user_name>/<folder_name>
 valid users = <user_name>
 read only = no
 ```
+
+### Ubuntu Services
+```bash
+sudo service nginx start
+sudo service nginx stop
+
+```
