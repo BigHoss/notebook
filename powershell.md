@@ -16,6 +16,11 @@ $ENV:HTTP_PROXY=$proxy
 $ENV:HTTPS_PROXY=$proxy
 ```
 
+### Check if UserProfile already exists
+```powershell
+Test-Path $profile
+```
+
 ### Create UserProfile
 ```powershell
 New-Item -ItemType file -Force $profile
