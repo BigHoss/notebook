@@ -15,3 +15,25 @@ $proxy='http://<IP>:<PORT>'
 $ENV:HTTP_PROXY=$proxy 
 $ENV:HTTPS_PROXY=$proxy
 ```
+
+### Create UserProfile
+```powershell
+New-Item -ItemType file -Force $profile
+```
+
+### Save windows credentials with password to xml
+```powershell
+Get-Credential -Credential "<domain>\<username>" | Export-Clixml password.xml
+```
+
+### add to userprofile .ps1
+Normally saved at: ```%Userprofile%\Documents\WindowsPowerShell```
+
+```powershell
+$MyProxy='https://<proxy:port>'
+$MyProxyPassword = Import-Clixml -Path "<full path to password.xml>"
+$WebClient = New-Object System.Net.WebClient
+$proxy = New-Object System.Net.WebProxy $MyProxy
+$proxy.Credentials = $MyProxyPassword
+$Webclient.proxy = $proxy
+```
