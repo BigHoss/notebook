@@ -23,3 +23,8 @@ git branch -m <newname>
 ```git
 git gc --prune=now
 ```
+
+
+## Git Behind a Proxy and self-signed certificate
+
+[Article by Mike Kaufmann](https://writeabout.net/2017/02/03/git-for-windows-with-tfs-and-ssl-behind-a-proxy/)
