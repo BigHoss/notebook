@@ -104,6 +104,6 @@ Tools -> Options -> Startup
 
 At Startup: Open empty Environment.
 
-[Startup Options](assets/sql_startup_dialogue.jpg "Startup Options")
+![Startup Options](assets/sql_startup_dialogue.jpg "Startup Options")
 
 It's actually Object Explorer and/or a query window and/or activity monitor that's asking for you to connect - so it has something to work with. All of the options other than "Open empty environment" require some kind of connection to work.
