@@ -4,3 +4,6 @@ Raphael Kuster <raphael.f.kuster@gmail.com>
 :imagesdir: assets/images
 :homepage: https://bighoss.github.io
 
+== Overview
+
+After stumbling across https://github.com/azer[Azer's] https://github.com/azer/notebook[notebook] i liked the idea and started moving my notebook to github too.
