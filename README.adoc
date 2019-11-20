@@ -1,0 +1,6 @@
+= Raphael's Notebook
+Raphael Kuster <raphael.f.kuster@gmail.com>
+:toc:
+:imagesdir: assets/images
+:homepage: https://bighoss.github.io
+
