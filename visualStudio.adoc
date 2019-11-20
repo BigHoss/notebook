@@ -1,7 +1,7 @@
 === Visual Studio 
 
 ==== Links
-* [Managing Tfs Programmatically](https://www.domstamand.com/accessing-tfs-2017-programmatically/)
+* https://www.domstamand.com/accessing-tfs-2017-programmatically/[Managing Tfs Programmatically]
 
 
 ==== Change Folder Path (Default: %userprofile%\source\repos)
@@ -17,14 +17,15 @@ You can activate the regex feature by pressing the "Use regular expression (Hotk
  
 Regex im Visual Studio hat ein paar Grundbegriffe:
 ===== Suchen:
-Wert | Beschreibung
----  | ---
-`.` (Punkt)     | markiert das nächste Zeichen
-`(.*)`          | markiert bis zum Ende des Satzes alle Zeichen
-`(.*)TEXT`      | markiert bis zum letzten vorkommen des Wortes "TEXT" alle Zeichen. Bsp: Hallo TEXT, du bist ein TEXT-Test!
-`(.*?)`         | markiert bis zum Ende des Satzes alle Zeichen
-`(.*?)TEXT`     | markiert bis zum ersten vorkommen des Wortes "TEXT" alle Zeichen. Bsp: Hallo TEXT, du bist ein TEXT-Test!
-`\(` oder `\)`  | markiert eine normale Klammer. Klammern sind Spezialzeichen im Regex, die für die Markierung verwendet werden und müssen daher speziell mit \ angeführt werden, um nicht als REGEX-Ausdruck zu gelten.
+.Search
+|===
+|Wert |Beschreibung
+|`.` (Punkt)     | markiert das nächste Zeichen
+|`(.*)`          | markiert bis zum Ende des Satzes alle Zeichen
+|`(.*)TEXT`      | markiert bis zum letzten vorkommen des Wortes "TEXT" alle Zeichen. Bsp: Hallo TEXT, du bist ein TEXT-Test!
+|`(.*?)`         | markiert bis zum Ende des Satzes alle Zeichen
+|`(.*?)TEXT`     | markiert bis zum ersten vorkommen des Wortes "TEXT" alle Zeichen. Bsp: Hallo TEXT, du bist ein TEXT-Test!
+|`\(` oder `\)`  | markiert eine normale Klammer. Klammern sind Spezialzeichen im Regex, die für die Markierung verwendet werden und müssen daher speziell mit \ angeführt werden, um nicht als REGEX-Ausdruck zu gelten.
 
 ===== Ersetzen:
 Wert | Beschreibung
