@@ -1,22 +1,22 @@
-# Visual Studio 
+=== Visual Studio 
 
-## Links
+==== Links
 * [Managing Tfs Programmatically](https://www.domstamand.com/accessing-tfs-2017-programmatically/)
 
 
-## Change Folder Path (Default: %userprofile%\source\repos)
+==== Change Folder Path (Default: %userprofile%\source\repos)
 Tools -> Options -> Projects and Solutions -> Locations -> Projects Location
 
 When you change that folder, also the folder in the Quick Access in any File/Folder open dialog will show that folder.
 
-## Find and Replace with Regex
-Im Visual Studio kann mit REGEX gesucht und/oder ersetzt werden.
-Wenn man "Ctrl + H" drückt, erscheint das Feld zum suchen und ersetzen.
- 
-In diesem Feld kann man Links unten, neben dem Auswahlbereich das Flag "Use regular expression (Hotkey: Alt + E)" auswählen.
+==== Find and Replace with Regex
+You can use REGEX to find/replace text in Visual Studio.
+With [CTRL]+[H] you can open the search & replace field.
+
+You can activate the regex feature by pressing the "Use regular expression (Hotkey: Alt + E)" button under the search field.
  
 Regex im Visual Studio hat ein paar Grundbegriffe:
-### Suchen:
+===== Suchen:
 Wert | Beschreibung
 ---  | ---
 `.` (Punkt)     | markiert das nächste Zeichen
@@ -25,14 +25,15 @@ Wert | Beschreibung
 `(.*?)`         | markiert bis zum Ende des Satzes alle Zeichen
 `(.*?)TEXT`     | markiert bis zum ersten vorkommen des Wortes "TEXT" alle Zeichen. Bsp: Hallo TEXT, du bist ein TEXT-Test!
 `\(` oder `\)`  | markiert eine normale Klammer. Klammern sind Spezialzeichen im Regex, die für die Markierung verwendet werden und müssen daher speziell mit \ angeführt werden, um nicht als REGEX-Ausdruck zu gelten.
-### Ersetzen:
+
+===== Ersetzen:
 Wert | Beschreibung
 ---  | ---
 `$1` bis `$x`   | markierte bereiche (mit .* oder .*?), wobei der index bei 1 beginnt.
 `\n`            | fügt einen Zeilenumbruch ein.
  
 Zwei praxis-Beispiele für die Anwendung von Regex:
-#### Beispiel 1: 
+====== Beispiel 1: 
 in einem switch-Case sollen die fix eingetragenen Werte mithilfe einer MetadataHelper-Klasse ausgelesen werden. Dadurch ist die Fehleranfälligkeit beim ändern der Werte oder der Namen behoben:
 ```csharp
 switch (table)
@@ -104,7 +105,7 @@ Suchen: `return "(.*?)";`
 Ersetzen: `return MetadataHelper.GetTableName(typeof(Dwh$1), context);`  
 In diesem Regex wird der Text zwischen den beiden Klammern ausgewählt und im ersetzen-Teil mit dem Präfix 'Dwh' in die typeof-Methode geschrieben, die widerum in der GetTableName-Methode übergeben wird
  
-#### Beispiel 2: 
+====== Beispiel 2: 
 In einem ASPx-Grid sollen mehrere Spalten einen Hyperlink im Datatemplate erhalten, der aus Fieldname + 'Link' besteht:
 ```csharp
 <dx:GridViewDataTextColumn Caption="Produced" FieldName="Produced" VisibleIndex="4" />
@@ -190,7 +191,7 @@ Tipp für das verwenden von Regex im Visual Studio: Eine einzelne Zeile markiere
 Bei größeren ersetzungsroutinen, wie im Beispiel 2 gezeigt, lohnt es sich die Zeilen selber zu schreiben und dann den betreffenden Wert in einem Editor der Wahl durch den $x-Ausdruck zu ersetzen.
 
 
-## Project Type Guids
+===== Project Type Guids
 
 | Name                                           | Guid                                   |
 | ---------------------------------------------- | -------------------------------------- |
@@ -261,7 +262,7 @@ Bei größeren ersetzungsroutinen, wie im Beispiel 2 gezeigt, lohnt es sich die 
 [Source](https://www.codeproject.com/Reference/720512/List-of-Visual-Studio-Project-Type-GUIDs)
 
 
-### Build Actions on Files
+===== Build Actions on Files
 * **None:** The file is not included in the project output group and is not compiled in the build process. An example is a text file that contains documentation, such as a Readme file.
 * **Compile:** The file is compiled into the build output. This setting is used for code files.
 * **Content:** Allows you to retrieve a file (in the same directory as the assembly) as a stream via Application.GetContentStream(URI). For this method to work, it needs a AssemblyAssociatedContentFile custom attribute which Visual Studio graciously adds when you mark a file as "Content"
@@ -278,11 +279,11 @@ Bei größeren ersetzungsroutinen, wie im Beispiel 2 gezeigt, lohnt es sich die 
 	[Source](https://stackoverflow.com/questions/145752/what-are-the-various-build-action-settings-in-visual-studio-project-properties)
 
 
-### Nuget Reinstall
+===== Nuget Reinstall
 `Update-Package -reinstall`
 
 
-### Nest a File under another
+===== Nest a File under another
 ```xml
 <Compile Include="ListHeader.cs" />
 <Compile Include="ListHeader.designer.cs">
