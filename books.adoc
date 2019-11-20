@@ -1,0 +1,13 @@
+=== Collection of books
+online and offline
+
+==== Online Libraries
+link:www.packtpub.com[PacktPub - Awesome Library with a free book each day ]
+
+==== Tech Books
+* https://paroj.github.io/gltut/[Learning Modern 3D Graphics Programming]
+* https://openframeworks.cc/ofBook/chapters/foreword.html[OpenFrameworks Book]
+
+==== Fictional ??
+* Dark Matter - https://en.wikipedia.org/wiki/Blake_Crouch[Blake Crouch]
+* https://en.wikipedia.org/wiki/Seveneves[Seveneves - Neal Stephenson]

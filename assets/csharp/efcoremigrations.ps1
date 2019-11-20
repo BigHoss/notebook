@@ -1,0 +1,1 @@
+Add-Migration -Name MyMigration -OutputDir MyMigrationDir -Context MyContext -Project MyProject -StartupProject MyStartupProject

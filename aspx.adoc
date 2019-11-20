@@ -1,0 +1,16 @@
+=== aspX
+Everything in here is asp.net(Webforms) specific
+
+==== Mimetype Download
+.Code
+[source, c#]
+----
+include::assets/aspx/mimetype.cs[]
+----
+
+==== Display PDF in iFrame
+.Code
+[source, c#]
+----
+include::assets/aspx/pdfiframe.cs[]
+----
