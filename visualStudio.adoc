@@ -16,7 +16,9 @@ With [CTRL]+[H] you can open the search & replace field.
 You can activate the regex feature by pressing the "Use regular expression (Hotkey: Alt + E)" button under the search field.
  
 Regex im Visual Studio hat ein paar Grundbegriffe:
+
 ===== Suchen:
+
 .Search
 |===
 |Wert |Beschreibung
