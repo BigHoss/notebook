@@ -1,0 +1,13 @@
+sit:
+  title: BigHoss's Notebook
+  url: https://noneyet.bighoss.github.io
+  start_page: README.adoc
+content:
+  sources:
+  - url: https://github.com/BigHoss/notebook
+    branches: master
+    start_path: docs
+ui:
+  bundle:
+    url:
+    snapshot: true
