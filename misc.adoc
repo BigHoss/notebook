@@ -17,3 +17,9 @@ Helps when the index of a string needs to be analyzed
 . You are now done! Connect the USB Ethernet dongle and enjoy!
 
 http://www.mobilechronicles.com/2016/08/17/how-to-install-drivers-for-the-apple-usb-ethernet-adapter-on-windows/[Source]
+
+
+==== Windows Features deactivated by administrator
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Programs\NoWindowsFeatures
+
+from 1 to 0 ( + reboot) fixed it for me. It's a registry change, so make sure you take the usual precautions.
