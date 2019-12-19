@@ -52,3 +52,10 @@ include::assets/csharp/todosnippet.cs[]
 ----
 include::assets/csharp/networksharecred.cs[]
 ----
+
+
+==== Set current directory
+[source, c#]
+----
+System.IO.Directory.SetCurrentDirectory(System.AppDomain.CurrentDomain.BaseDirectory);
+----
