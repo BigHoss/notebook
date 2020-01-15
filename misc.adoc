@@ -23,3 +23,11 @@ http://www.mobilechronicles.com/2016/08/17/how-to-install-drivers-for-the-apple-
 HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Programs\NoWindowsFeatures
 
 from 1 to 0 ( + reboot) fixed it for me. It's a registry change, so make sure you take the usual precautions.
+
+
+==== Batch File - use local path when run as admin
+[.batch]
+====
+setlocal
+cd /d %~dp0
+====
