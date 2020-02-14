@@ -4,3 +4,8 @@
 ```
 dotnet publish -c Release -r win10-x64
 ```
+
+## Update Tool
+```
+dotnet tool update --global dotnet-ef
+```
