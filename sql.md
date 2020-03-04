@@ -16,10 +16,10 @@ If you try to change i.e. column types and you get that error message.
 ## Reset whole DB
 ```sql
    USE [DatabaseName]
-    EXEC sp_msforeachtable "ALTER TABLE ? NOCHECK CONSTRAINT all"       -- Disable All the constraints
-    EXEC sp_MSForEachTable "DELETE FROM ?"    -- Delete All the Table data
-    Exec sp_MSforeachtable 'DBCC CHECKIDENT(''?'', RESEED, 0)' -- Reseed All the table to 0
-    Exec sp_msforeachtable "ALTER TABLE ? WITH CHECK CHECK CONSTRAINT all"  -- Enable All  the constraints back
+    EXEC sp_msforeachtable "ALTER TABLE ? NOCHECK CONSTRAINT all";           -- Disable All the constraints
+    EXEC sp_MSForEachTable "DELETE FROM ?";                                  -- Delete All the Table data
+    Exec sp_MSforeachtable 'DBCC CHECKIDENT(''?'', RESEED, 0)';              -- Reseed All the table to 0
+    Exec sp_msforeachtable "ALTER TABLE ? WITH CHECK CHECK CONSTRAINT all";  -- Enable All  the constraints back
 -- You may ignore the errors that shows the table without Auto increment field.
 ```
 [Source](http://stackoverflow.com/questions/510121/reset-autoincrement-in-sql-server-after-delete)
@@ -27,12 +27,12 @@ If you try to change i.e. column types and you get that error message.
 
 ## Restore User mapping
 ```sql
-EXEC sp_change_users_login auto_fix, '<DBUsername, string, user>'
+EXEC sp_change_users_login auto_fix, '<DBUsername, string, user>';
 ```
 
 ## Show all tables
 ```sql
-SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE='BASE TABLE'
+SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE='BASE TABLE';
 ```
 [Source](http://stackoverflow.com/questions/3913620/get-all-table-names-of-a-particular-database-by-sql-query)
 
@@ -40,20 +40,20 @@ SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE='BASE TABLE'
 
 ### Drop all tables
 ```sql
-EXEC sp_msforeachtable "ALTER TABLE ? NOCHECK CONSTRAINT all"
+EXEC sp_msforeachtable "ALTER TABLE ? NOCHECK CONSTRAINT all";
 
-EXEC sp_MSforeachtable @command1 = "DROP TABLE ?"
+EXEC sp_MSforeachtable @command1 = "DROP TABLE ?";
 ```
 
 ### Truncate all tables
 ```sql
-USE MyDatabase
-EXEC sp_MSforeachtable 'TRUNCATE TABLE ?'
+USE MyDatabase;
+EXEC sp_MSforeachtable 'TRUNCATE TABLE ?';
 ```
 
 ### Export Shema
 ```sql
-select * from INFORMATION_SCHEMA.COLUMNS
+select * from INFORMATION_SCHEMA.COLUMNS;
 ```
 
 
