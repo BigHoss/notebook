@@ -38,3 +38,10 @@ When you first enable migrations, a configuration class and an initial migration
 
 ## Startup Performance increase
 [Fusonic Blogpost](https://www.fusonic.net/developers/2014/07/09/3-steps-for-fast-entity-framework-6-1-code-first-startup-performance/)
+
+
+
+## Update ef tools
+```
+dotnet tool update --global dotnet-ef
+```
