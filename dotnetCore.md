@@ -10,7 +10,10 @@ dotnet publish -c Release -r win10-x64
 dotnet tool update --global dotnet-ef
 ```
 
+
 # GRPC Service hosted in Asp.net Core
+
+## Error message on Client Status(StatusCode=Unknown, Detail="Stream removed")
 ```csharp
 public static IHostBuilder CreateHostBuilder(string[] args) =>
     Host.CreateDefaultBuilder(args)
