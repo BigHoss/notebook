@@ -1,1 +1,0 @@
-result = ﻿result.Where(a => a.SourceID == (int)Source.AutomaticImport).Select(c => { c.SourceDescription = sourceDescription; return c; }).ToList();
