@@ -32,3 +32,18 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
         });
 ```
 [Source](https://stackoverflow.com/a/57819978)
+
+
+# appsettings.json in Console / WPF application
+```powershell
+install-package Microsoft.Extensions.Configuration
+install-package Microsoft.Extensions.Configuration.Json
+install-package Microsoft.Extensions.Configuration.FileExtensions
+```
+
+```csharp
+var configuration = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetParent(AppContext.BaseDirectory).FullName)
+                .AddJsonFile("appsettings.json", false)
+                .Build();
+```
