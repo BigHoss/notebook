@@ -17,6 +17,7 @@ choco install visualstudio2019-workload-netcoretools
 choco install visualstudio2019-workload-netcorebuildtools
 choco install visualstudio2019-workload-webbuildtools
 choco install visualstudio2019-workload-nativedesktop
+choco install visualstudio2019-workload-manageddesktop
 choco install jetbrainstoolbox 
 choco install dotnetcore-sdk 
 choco install sql-server-management-studio
