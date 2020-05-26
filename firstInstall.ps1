@@ -6,21 +6,32 @@ choco feature enable -n=allowGlobalConfirmation
 
 #first
 choco install googlechrome 
+choco install directoryopus
+choco install 1password
 choco install 7zip 
-choco install visualstudio2017professional 
-choco install resharper 
+choco install visualstudio2019professional
+choco install visualstudio2019-workload-databuildtools
+choco install visualstudio2019-workload-data
+choco install visualstudio2019-workload-netweb
+choco install visualstudio2019-workload-netcoretools
+choco install visualstudio2019-workload-netcorebuildtools
+choco install visualstudio2019-workload-webbuildtools
+choco install visualstudio2019-workload-nativedesktop
+choco install jetbrainstoolbox 
 choco install dotnetcore-sdk 
 choco install sql-server-management-studio
 choco install ditto
 choco install firacode
 
+choco install sql-server-2019
+choco install dbforge-sql-cmpl-exp
+
 # everywhere
-choco install inkscape 
-choco install winmerge 
-choco install royalts 
+choco install opera
+choco install beyondcompare 
+choco install royalts-v5
 choco install lockhunter 
 choco install autoruns 
-choco install adobereader 
 choco install onenote
 choco install everything /run-on-system-startup /service
 choco install paint.net
@@ -34,16 +45,17 @@ choco install git.install /GitAndUnixToolsOnPath /NoAutoCrlf
 choco install cmder
 
 # home
-choco install unchecky 
 choco install ccleaner 
+choco install ccenhancer
 choco install teamviewer 
 choco install itunes 
 choco install irfanview 
-choco install mpc-hc 
-choco install greenshot  
-choco install treesizefree 
 choco install irfanviewplugins 
-choco install revo.uninstaller 
+choco install mpc-hc 
+choco install sharex  
+choco install treesizefree 
+
+choco install revouninstallerpro 
 choco install unetbootin 
 choco install teracopy 
 choco install plantuml
