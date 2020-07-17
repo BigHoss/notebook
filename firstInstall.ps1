@@ -20,6 +20,8 @@ choco install visualstudio2019-workload-nativedesktop
 choco install visualstudio2019-workload-manageddesktop
 choco install jetbrainstoolbox 
 choco install dotnetcore-sdk 
+choco install netfx-4.8-devpack
+choco install netfx-4.7-devpack
 choco install sql-server-management-studio
 choco install ditto
 choco install firacode
