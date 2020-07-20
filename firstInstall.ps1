@@ -31,6 +31,10 @@ choco install nssm
 choco install sql-server-2019
 choco install dbforge-sql-cmpl-exp
 
+# fonts
+choco install hackfont-windows
+choco install firacode
+
 # everywhere
 choco install opera
 choco install beyondcompare 
