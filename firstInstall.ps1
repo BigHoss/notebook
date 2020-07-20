@@ -6,6 +6,7 @@ choco feature enable -n=allowGlobalConfirmation
 
 #first
 choco install googlechrome 
+choco install powertoys
 choco install directoryopus
 choco install 1password
 choco install 7zip 
