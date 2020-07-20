@@ -29,6 +29,7 @@ choco install firacode
 choco install nssm
 
 choco install sql-server-2019
+choco install ssms
 choco install dbforge-sql-cmpl-exp
 
 # fonts
