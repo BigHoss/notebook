@@ -5,6 +5,7 @@ iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/in
 choco feature enable -n=allowGlobalConfirmation
 
 # powershell Powerline
+# add win term to shell https://github.com/lextm/windowsterminal-shell
 choco install powershell-core
 choco install microsoft-windows-terminal
 choco install cascadiacodepl
