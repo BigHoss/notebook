@@ -4,6 +4,17 @@ iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/in
 
 choco feature enable -n=allowGlobalConfirmation
 
+# powershell Powerline
+choco install powershell-core
+choco install microsoft-windows-terminal
+choco install cascadiacodepl
+choco install cascadiamonopl
+install-module posh-git
+install-module oh-my-posh
+install-module -Name PSReadLine -Force -SkipPublisherCheck
+
+Add-Content $profile 'Import-Module posh-git\nImport-Module oh-my-posh\nSet-Theme Paradox'
+
 #first
 choco install googlechrome 
 choco install powertoys
