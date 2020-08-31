@@ -42,3 +42,11 @@ $proxy = New-Object System.Net.WebProxy $MyProxy
 $proxy.Credentials = $MyProxyPassword
 $Webclient.proxy = $proxy
 ```
+
+
+### Fastest copy
+
+```powershell
+robocopy T:\StdXml_Backup_Golive_20200828 T:\Transfer\IN_StandardXml /E /Z /ZB /R:5 /W:5 /TBD /NP /V /MT:16
+```
+[SOurce](https://pureinfotech.com/robocopy-transfer-files-fast-network-windows-10/)
