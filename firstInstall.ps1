@@ -14,7 +14,10 @@ install-module posh-git
 install-module oh-my-posh
 install-module -Name PSReadLine -Force -SkipPublisherCheck
 
-Add-Content $profile 'Import-Module posh-git\nImport-Module oh-my-posh\nSet-Theme Paradox'
+git clone https://github.com/lextm/windowsterminal-shell.git
+./windowsterminal-shell/install.ps1 mini
+
+Add-Content $profile "Import-Module posh-git\r\nImport-Module oh-my-posh\r\nSet-Theme Paradox"
 
 #first
 choco install googlechrome 
