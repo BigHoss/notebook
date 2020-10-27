@@ -42,6 +42,7 @@ choco install sql-server-management-studio
 choco install ditto
 choco install firacode
 choco install nssm
+choco install ghostdoc-pro
 
 choco install sql-server-2019
 choco install ssms
