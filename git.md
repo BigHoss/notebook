@@ -33,5 +33,5 @@ git gc --prune=now
 ## Restore deletes stash
 run in pwsh
 ```pwsh
-git fsck --no-reflog | select-string 'dangling commit' | foreach { $_.ToString().Split(" ")[2] }
+gitk --all $(git fsck --no-reflog | Select-String "(dangling commit )(.*)" | %{ $_.Line.Split(' ')[2] })
 ```
