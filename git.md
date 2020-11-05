@@ -28,3 +28,10 @@ git gc --prune=now
 ## Git Behind a Proxy and self-signed certificate
 
 [Article by Mike Kaufmann](https://writeabout.net/2017/02/03/git-for-windows-with-tfs-and-ssl-behind-a-proxy/)
+
+
+## Restore deletes stash
+run in pwsh
+```pwsh
+git fsck --no-reflog | select-string 'dangling commit' | foreach { $_.ToString().Split(" ")[2] }
+```
