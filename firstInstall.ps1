@@ -8,8 +8,6 @@ choco feature enable -n=allowGlobalConfirmation
 # add win term to shell https://github.com/lextm/windowsterminal-shell
 choco install powershell-core
 choco install microsoft-windows-terminal
-choco install cascadiacodepl
-choco install cascadiamonopl
 install-module posh-git
 install-module oh-my-posh
 install-module -Name PSReadLine -Force -SkipPublisherCheck
@@ -25,6 +23,25 @@ choco install powertoys
 choco install directoryopus
 choco install 1password
 choco install 7zip 
+choco install ditto
+choco install nssm
+choco install opera
+choco install beyondcompare 
+choco install royalts-v5
+choco install lockhunter 
+choco install autoruns 
+choco install onenote
+choco install everything /run-on-system-startup /service
+choco install paint.net
+choco install sharex  
+choco install treesizefree 
+choco install revouninstallerpro 
+
+#dev
+choco install github 
+choco install visualstudiocode  
+choco install linqpad5 
+choco install git.install /GitAndUnixToolsOnPath /NoAutoCrlf
 choco install visualstudio2019professional
 choco install visualstudio2019-workload-databuildtools
 choco install visualstudio2019-workload-data
@@ -35,40 +52,26 @@ choco install visualstudio2019-workload-webbuildtools
 choco install visualstudio2019-workload-nativedesktop
 choco install visualstudio2019-workload-manageddesktop
 choco install jetbrainstoolbox 
+choco install ghostdoc-pro
+
+# frameworks
+choco install dotnet-5.0-sdk
 choco install dotnetcore-sdk 
 choco install netfx-4.8-devpack
 choco install netfx-4.7-devpack
-choco install sql-server-management-studio
-choco install ditto
-choco install firacode
-choco install nssm
-choco install ghostdoc-pro
 
+# db
+choco install sql-server-management-studio
 choco install sql-server-2019
 choco install ssms
 choco install dbforge-sql-cmpl-exp
+choco install postgresql
 
 # fonts
 choco install hackfont-windows
 choco install firacode
-
-# everywhere
-choco install opera
-choco install beyondcompare 
-choco install royalts-v5
-choco install lockhunter 
-choco install autoruns 
-choco install onenote
-choco install everything /run-on-system-startup /service
-choco install paint.net
-
-#dev
-choco install dotnetcore-runtime 
-choco install github 
-choco install visualstudiocode  
-choco install linqpad5 
-choco install git.install /GitAndUnixToolsOnPath /NoAutoCrlf
-choco install cmder
+choco install cascadiacodepl
+choco install cascadiamonopl
 
 # home
 choco install ccleaner 
@@ -78,13 +81,10 @@ choco install itunes
 choco install irfanview 
 choco install irfanviewplugins 
 choco install mpc-hc 
-choco install sharex  
-choco install treesizefree 
 
-choco install revouninstallerpro 
 choco install unetbootin 
 choco install teracopy 
-choco install plantuml
+choco install umlet
 
 #special
 #choco -y install openssh awscli sqlite
