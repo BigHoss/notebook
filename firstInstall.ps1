@@ -18,10 +18,10 @@ git clone https://github.com/lextm/windowsterminal-shell.git
 Add-Content $profile "Import-Module posh-git\r\nImport-Module oh-my-posh\r\nSet-Theme Paradox"
 
 #first
-choco install googlechrome 
+choco install brave 
 choco install powertoys
 choco install directoryopus
-choco install 1password
+choco install bitwarden
 choco install 7zip 
 choco install ditto
 choco install nssm
@@ -58,10 +58,8 @@ choco install ghostdoc-pro
 choco install dotnet-5.0-sdk
 choco install dotnetcore-sdk 
 choco install netfx-4.8-devpack
-choco install netfx-4.7-devpack
 
 # db
-choco install sql-server-management-studio
 choco install sql-server-2019
 choco install ssms
 choco install dbforge-sql-cmpl-exp
