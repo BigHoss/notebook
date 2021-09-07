@@ -1,3 +1,8 @@
+# command to run this file directly:
+# copy and run this in a pwsh terminal
+# iex ((New-Object System.Net.WebClient).DownloadString('https://github.com/BigHoss/notebook/blob/258076ca65404225dd3977879a8d193c51198c60/firstInstall.ps1'))
+
+
 Set-ExecutionPolicy Bypass
 
 iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
