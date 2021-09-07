@@ -15,7 +15,24 @@ install-module -Name PSReadLine -Force -SkipPublisherCheck
 git clone https://github.com/lextm/windowsterminal-shell.git
 ./windowsterminal-shell/install.ps1 mini
 
-Add-Content $profile "Import-Module posh-git\r\nImport-Module oh-my-posh\r\nSet-Theme Paradox"
+    $null = Start-ThreadJob -Name "Get version of `$profile from gist" -ArgumentList $gistUrl, $latestVersionFile, $versionRegEx -ScriptBlock {
+      param ($gistUrl, $latestVersionFile, $versionRegEx)
+
+      try {
+        $gist = Invoke-RestMethod $gistUrl -ErrorAction Stop
+
+        $gistProfile = $gist.Files."profile.ps1".Content
+        [version]$gistVersion = "0.0.0"
+        if ($gistProfile -match $versionRegEx) {
+          $gistVersion = $matches.Version
+          Set-Content -Path $latestVersionFile -Value $gistVersion
+        }
+      }
+      catch {
+        # we can hit rate limit issue with GitHub since we're using anonymous
+        Write-Verbose -Verbose "Was not able to access gist to check for newer version"
+      }
+    }
 
 #first
 choco install brave 
