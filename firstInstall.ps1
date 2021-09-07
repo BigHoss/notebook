@@ -4,6 +4,8 @@ iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/in
 
 choco feature enable -n=allowGlobalConfirmation
 
+Set-PSRepository -Name 'PSGallery' -InstallationPolicy Trusted
+
 # powershell Powerline
 # add win term to shell https://github.com/lextm/windowsterminal-shell
 choco install powershell-core
@@ -33,7 +35,8 @@ git clone https://github.com/lextm/windowsterminal-shell.git
         Write-Verbose -Verbose "Was not able to access gist to check for newer version"
       }
     }
-
+    
+    
 #first
 choco install brave 
 choco install powertoys
