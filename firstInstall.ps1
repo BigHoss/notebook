@@ -26,6 +26,11 @@ install-module -Name PSReadLine -Force -SkipPublisherCheck
 git clone https://github.com/lextm/windowsterminal-shell.git
 ./windowsterminal-shell/install.ps1 mini
 
+# check if newer version
+$gistUrl = "https://api.github.com/gists/3aaeba97dac72a6739506a0b15ce03b1"
+$latestVersionFile = [System.IO.Path]::Combine("$HOME",'.latest_profile_version')
+$versionRegEx = "# Version (?<version>\d+\.\d+\.\d+)"
+
     $null = Start-ThreadJob -Name "Get version of `$profile from gist" -ArgumentList $gistUrl, $latestVersionFile, $versionRegEx -ScriptBlock {
       param ($gistUrl, $latestVersionFile, $versionRegEx)
 
