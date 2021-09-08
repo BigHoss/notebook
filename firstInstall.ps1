@@ -5,6 +5,10 @@
 
 Set-ExecutionPolicy Bypass
 
+# dotnet
+iex ((New-Object System.Net.WebClient).DownloadString('https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.ps1'))
+
+#chocolatey
 iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
 choco feature enable -n=allowGlobalConfirmation
