@@ -19,9 +19,11 @@ Set-PSRepository -Name 'PSGallery' -InstallationPolicy Trusted
 # add win term to shell https://github.com/lextm/windowsterminal-shell
 choco install powershell-core
 choco install microsoft-windows-terminal
-install-module posh-git
-install-module oh-my-posh
-install-module -Name PSReadLine -Force -SkipPublisherCheck
+winget install JanDeDobbeleer.OhMyPosh
+
+'oh-my-posh --init --shell pwsh --config G:\My Drive\Settings\Powershell\rfKuster.omp.json | Invoke-Expression\nImport-Module -Name Terminal-Icons' >> $profile
+Install-Module -Name Terminal-Icons -Repository PSGallery
+
 
 git clone https://github.com/lextm/windowsterminal-shell.git
 ./windowsterminal-shell/install.ps1 mini
@@ -49,6 +51,8 @@ $versionRegEx = "# Version (?<version>\d+\.\d+\.\d+)"
         Write-Verbose -Verbose "Was not able to access gist to check for newer version"
       }
     }
+    
+    winget install microsoft.dotnet
     
     
 #first
