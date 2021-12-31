@@ -2,7 +2,7 @@
 id: tLR4BHOdWjvygqtNQM869
 title: Root
 desc: ''
-updated: 1640939010927
+updated: 1640939840960
 created: 1640938408246
 ---
 # notebook
@@ -14,13 +14,6 @@ This notebook uses [dendron](https://www.dendron.so/)
 ## Code / Tech
 | Link                                   | Description |
 | -------------------------------------- | ----------- |
-| [aspX](aspx.md)                        |
-| [C#](csharp.md)                        |
-| [C++](cplusplus.md)                    |
-| [Code Quality](codeQuality.md)         |
-| [Dotnet Core](dotnetCore.md)           |
-| [Entity Framework](entityFramework.md) |
-| [Excel](excel.md)                      |
 | [OSCS](https://github.com/ForrestKnight/open-source-cs) | The Open Source Computer Science Degree | 
 | [Professional Programming](https://github.com/charlax/professional-programming) | A collection of full-stack resources for programmers. |
 | [Chocolatey install Script](https://github.com/BigHoss/chocolatey-scripts)  | This is my default install for a new pc.  |
