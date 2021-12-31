@@ -1,3 +1,10 @@
+---
+id: uWvhiaqoh9Nt20wIzx2on
+title: Entityframework
+desc: ''
+updated: 1640939078232
+created: 1640939075525
+---
 # Entity Framework stuff
 
 ## Start
@@ -45,3 +52,4 @@ When you first enable migrations, a configuration class and an initial migration
 ```
 dotnet tool update --global dotnet-ef
 ```
+

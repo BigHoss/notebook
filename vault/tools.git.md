@@ -1,3 +1,10 @@
+---
+id: FwhvRnRpOGNMqgcyMOXkq
+title: Git
+desc: ''
+updated: 1640939005743
+created: 1640939002383
+---
 # Git stuff
 
 ### Cleanup all ignored files in repo
@@ -35,3 +42,4 @@ run in pwsh
 ```pwsh
 gitk --all $(git fsck --no-reflog | Select-String "(dangling commit )(.*)" | %{ $_.Line.Split(' ')[2] })
 ```
+

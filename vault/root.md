@@ -1,8 +1,15 @@
+---
+id: tLR4BHOdWjvygqtNQM869
+title: Root
+desc: ''
+updated: 1640939010927
+created: 1640938408246
+---
 # notebook
 
 After stumbling across [Azer's](https://github.com/azer) [notebook](https://github.com/azer/notebook) i liked the idea and started moving my notebook to github too.
 
-
+This notebook uses [dendron](https://www.dendron.so/)
 
 ## Code / Tech
 | Link                                   | Description |
@@ -14,11 +21,6 @@ After stumbling across [Azer's](https://github.com/azer) [notebook](https://gith
 | [Dotnet Core](dotnetCore.md)           |
 | [Entity Framework](entityFramework.md) |
 | [Excel](excel.md)                      |
-| [Git](git.md)                          |
-| [Linux & WSL](linux.md)                |
-| [Powershell](powershell.md)            |
-| [SQL](sql.md)                          | |
-| [Visual Studio / Devops / Tfs](visualStudio.md)       |
 | [OSCS](https://github.com/ForrestKnight/open-source-cs) | The Open Source Computer Science Degree | 
 | [Professional Programming](https://github.com/charlax/professional-programming) | A collection of full-stack resources for programmers. |
 | [Chocolatey install Script](https://github.com/BigHoss/chocolatey-scripts)  | This is my default install for a new pc.  |
@@ -49,4 +51,3 @@ After stumbling across [Azer's](https://github.com/azer) [notebook](https://gith
 | ----------------- | ---------------------- |
 | [Books](books.md) |
 | [Misc](misc.md)   | Just some useful stuff |
-

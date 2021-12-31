@@ -1,4 +1,10 @@
-# SQL Stuff (mainly MS SQL)
+---
+id: Mk1Xd4KmKnciXZxt6O8DD
+title: Sql
+desc: 'SQL Stuff (mainly MS SQL)'
+updated: 1640939621355
+created: 1640938479611
+---
 
 ## reset Identity
 ```sql
@@ -104,6 +110,6 @@ Tools -> Options -> Startup
 
 At Startup: Open empty Environment.
 
-![Startup Options](assets/sql_startup_dialogue.jpg "Startup Options")
+![Startup Options](/assets/images/2021-12-31-09-33-30.png)
 
 It's actually Object Explorer and/or a query window and/or activity monitor that's asking for you to connect - so it has something to work with. All of the options other than "Open empty environment" require some kind of connection to work.

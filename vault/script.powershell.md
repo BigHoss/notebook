@@ -1,3 +1,11 @@
+---
+id: FjmejMFSyzK8TEgbSzDVN
+title: Powershell
+desc: ''
+updated: 1640938718788
+created: 1640938707129
+---
+
 # Powershell stuff
 
 ### Run on doubleclick

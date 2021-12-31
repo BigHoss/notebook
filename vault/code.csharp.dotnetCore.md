@@ -1,3 +1,10 @@
+---
+id: Y9bvYQ7mVUxt8XS3fKqk5
+title: dotnetCore
+desc: ''
+updated: 1640939097019
+created: 1640939095517
+---
 # dotnet Core related stuff
 
 ## Build Console to Exe
@@ -31,3 +38,4 @@ var configuration = new ConfigurationBuilder()
 
 ```ngrok http https://localhost:5001 -host-header="localhost:5001"```
 [source](https://www.jerriepelser.com/blog/using-ngrok-with-aspnet-core/)
+

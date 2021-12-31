@@ -1,3 +1,10 @@
+---
+id: IKsDyUIKXUNsJ9Rub7HsG
+title: Linux
+desc: 'Linux & Wsl'
+updated: 1640938905159
+created: 1640938896572
+---
 # Linux / Windows Subsystem for Linux stuff
 
 ### Configure Proxy for linux bash
@@ -49,3 +56,4 @@ sudo service nginx stop
 ```
 echo -n "Enter Password: " && head -1 </dev/stdin | tr -d '\n' | sha256sum | cut -d" " -f1
 ```
+

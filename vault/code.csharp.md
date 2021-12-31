@@ -1,3 +1,10 @@
+---
+id: 7ujZGDzacQ2Lh0MoIRzG2
+title: Csharp
+desc: ''
+updated: 1640939137521
+created: 1640939075530
+---
 ### C#
 Here are some snippets and code parts that helped me on my way
 
@@ -105,4 +112,5 @@ Add-Migration -Name MyMigration -OutputDir MyMigrationDir -Context MyContext -Pr
 ```csharp
 System.IO.Directory.SetCurrentDirectory(System.AppDomain.CurrentDomain.BaseDirectory);
 ```
+
 
