@@ -2,7 +2,7 @@
 id: tLR4BHOdWjvygqtNQM869
 title: Root
 desc: ''
-updated: 1640939840960
+updated: 1640944074674
 created: 1640938408246
 ---
 # notebook
@@ -27,20 +27,8 @@ This notebook uses [dendron](https://www.dendron.so/)
 | [DJV View](http://djv.sourceforge.net/) | Best PReview VIdeo Player|
 
 
-## Life
-
-| Link | Desciption |
-| ---- | ---------- |
-| [Parenting](parenting.md)| |
-
 ## Business
 | Link                                   | Description |
 | -------------------------------------- | ----------- |
 | [AND.CO](http://www.and.co)                   | Awesome Tool to create and manage Contracts and Invoices |
 | [GitPitch](https://gitpitch.com/) | Best tool for Presentations |
-
-## Do not fit in one category
-| Link              | Description            |
-| ----------------- | ---------------------- |
-| [Books](books.md) |
-| [Misc](misc.md)   | Just some useful stuff |
