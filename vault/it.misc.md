@@ -2,7 +2,7 @@
 id: R7Vx8irklYSvvgeDu74oF
 title: Misc
 desc: ''
-updated: 1640938870354
+updated: 1641591800825
 created: 1640938802227
 ---
 
@@ -18,12 +18,12 @@ Helps when the index of a string needs to be analyzed
 ```
 
 ### Apple USB Ethernet
-. Download the latest version of Boot Camp Support Software from Apple, they contain the necessary drivers. You can find it https://support.apple.com/downloads/macoscomponents[here]. (Around 260 MB)
+. Download the latest version of Boot Camp Support Software from Apple, they contain the necessary drivers. You can find it [here](https://support.apple.com/downloads/boot%2520camp%2520support). (Around 260 MB)
 . Open the ZIP-file and browse to `BootCamp\Drivers\Asix`
 . Run the file `AsixSetup64.exe` and go through the installation choosing the default options.
 . You are now done! Connect the USB Ethernet dongle and enjoy!
 
-http://www.mobilechronicles.com/2016/08/17/how-to-install-drivers-for-the-apple-usb-ethernet-adapter-on-windows/[Source]
+[Source](http://www.mobilechronicles.com/2016/08/17/how-to-install-drivers-for-the-apple-usb-ethernet-adapter-on-windows/)
 
 
 ### Windows Features deactivated by administrator

@@ -2,9 +2,15 @@
 id: Mk1Xd4KmKnciXZxt6O8DD
 title: Sql
 desc: 'SQL Stuff (mainly MS SQL)'
-updated: 1640939621355
+updated: 1667813828780
 created: 1640938479611
 ---
+
+## rename linked server
+```sql
+EXEC master.dbo.sp_serveroption @server=N'<SERVERNAME>', @optname=N'name', @optvalue=N'<NEWNAME>'
+
+```
 
 ## reset Identity
 ```sql
