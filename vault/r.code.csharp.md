@@ -1,18 +1,21 @@
 ---
 id: 7ujZGDzacQ2Lh0MoIRzG2
-title: Csharp
+title: C#
 desc: ''
-updated: 1640939137521
+updated: 1672674648294
 created: 1640939075530
 ---
-### C#
+
+## C sharp (#)
+
 Here are some snippets and code parts that helped me on my way
 
-#### Misc Links
-* [Choosing the right Collection](https://www.codeproject.com/Articles/1095822/Choosing-The-Right-Collection)
+### Misc Links
 
+- [Choosing the right Collection](https://www.codeproject.com/Articles/1095822/Choosing-The-Right-Collection)
 
-#### System.Flags
+### System.Flags
+
 ```csharp
 [Flags]
 public enum MyEnum
@@ -25,32 +28,32 @@ public enum MyEnum
 }
 ```
 
+### Todo Snippet
 
-#### Todo Snippet
 ```xml
-<?xml version="1.0" encoding="utf-8"?>  
-<CodeSnippets  
-    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">  
-    <CodeSnippet Format="1.0.0">  
-        <Header>  
-            <Title>Todo-Rk</Title>  
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Todo-Rk</Title>
             <Author>Raphael Kuster</Author>
             <Description>Adds a todo for me</Description>
             <Shortcut>tdrk</Shortcut>
-        </Header>  
-        <Snippet>  
-            <Code Language="csharp">  
-                <![CDATA[//TODO-RK: ]]>  
-            </Code>  
-        </Snippet>  
-    </CodeSnippet>  
+        </Header>
+        <Snippet>
+            <Code Language="csharp">
+                <![CDATA[//TODO-RK: ]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
 </CodeSnippets>
 ```
 
-#### Add to *.csproj
+### Add to \*.csproj
 
+### Connect to network share with Credetials
 
-#### Connect to network share with Credetials
 ```csharp
 NetworkCredential theNetworkCredential = new NetworkCredential(@"domain\username", "password");
 CredentialCache theNetCache = new CredentialCache();
@@ -58,28 +61,29 @@ theNetCache.Add(new Uri(@"\\computer"), "Basic", theNetworkCredential);
 string[] theFolders = Directory.GetDirectories(@"\\computer\share");
 ```
 
+### Change items of collection with LINQ
 
-
-#### Change items of collection with LINQ
 ```csharp
 result = result.Where(a => a.SourceID == (int)Source.AutomaticImport)
-               .Select(c => 
-                        { 
-                          c.SourceDescription = sourceDescription; 
-                          return c; 
+               .Select(c =>
+                        {
+                          c.SourceDescription = sourceDescription;
+                          return c;
                          }
                        )
                .ToList();
 ```
 
-#### EF Core Migrations
+### EF Core Migrations
+
 ```powershell
 Add-Migration -Name MyMigration -OutputDir MyMigrationDir -Context MyContext -Project MyProject -StartupProject MyStartupProject
 ```
 
 [Source](https://github.com/aspnet/EntityFramework/issues/4149)
 
-#### Elevate Process ("Run as Admin")
+### Elevate Process ("Run as Admin")
+
 ```csharp
   if (IsAdministrator() == false)
   {
@@ -105,12 +109,11 @@ Add-Migration -Name MyMigration -OutputDir MyMigrationDir -Context MyContext -Pr
   // Or an elevate vbs script can launch programs as admin.
   // (does not work: "runas /user:admin" from cmd-line prompts for admin pass)
 ```
+
 [Source](https://stackoverflow.com/questions/8447/what-does-the-flags-enum-attribute-mean-in-c)
 
+### Set current directory
 
-#### Set current directory
 ```csharp
 System.IO.Directory.SetCurrentDirectory(System.AppDomain.CurrentDomain.BaseDirectory);
 ```
-
-

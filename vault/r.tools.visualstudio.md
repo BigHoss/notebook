@@ -1,7 +1,7 @@
 ---
 id: tSJecYDypTA7FfNpHumwl
 title: Visualstudio
-desc: 'Visual Studio / Azure Devops'
+desc: Visual Studio / Azure Devops
 updated: 1640938675299
 created: 1640938436101
 ---

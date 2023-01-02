@@ -1,7 +1,7 @@
 ---
 id: Mk1Xd4KmKnciXZxt6O8DD
 title: Sql
-desc: 'SQL Stuff (mainly MS SQL)'
+desc: SQL Stuff (mainly MS SQL)
 updated: 1640939621355
 created: 1640938479611
 ---
