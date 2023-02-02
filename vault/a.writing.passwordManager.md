@@ -1,9 +1,10 @@
 ---
 id: 517mjqmltuos0fur7mtdv5a
 title: Password manager for 2023
-desc: asdf
-updated: 1675341338813
+desc: 'we need a password manager that fits all our needs'
+updated: 1675344998914
 created: 1675335075319
+stage: 'draft'
 ---
 ## Password Manager for ~~"the future"~~ 2023
 
@@ -23,11 +24,18 @@ So I am looking for a new solution.
   - on desktop
   - is configurable per login
 
-
 ### Possible candidates
 
 - [[p.passBolt]]
-- Padloc
+- [Padloc github](https://github.com/padloc/padloc)
+  - [app](https://padloc.app/#plans)
 - 1Password
 - LastPass (was hacked)
 - Dashlane
+- [Hypervault](hypervault.com/)
+
+### links
+
+[european alternatives password managers](https://european-alternatives.eu/category/password-managers)
+
+{{fm.stage}}
