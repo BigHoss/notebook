@@ -1,8 +1,8 @@
 ---
 id: 517mjqmltuos0fur7mtdv5a
 title: Password manager for 2023
-desc: 'asdf'
-updated: 1675336027265
+desc: asdf
+updated: 1675341338813
 created: 1675335075319
 ---
 ## Password Manager for ~~"the future"~~ 2023
@@ -26,7 +26,7 @@ So I am looking for a new solution.
 
 ### Possible candidates
 
-- PassBolt
+- [[p.passBolt]]
 - Padloc
 - 1Password
 - LastPass (was hacked)
