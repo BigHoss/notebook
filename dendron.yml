@@ -24,6 +24,9 @@ commands:
 workspace:
     vaults:
         -
+            fsPath: private
+            name: private
+        -
             fsPath: vault
     journal:
         dailyDomain: daily
@@ -88,16 +91,8 @@ publishing:
     copyAssets: true
     siteHierarchies:
         - root
-    enableSiteLastModified: true
-    siteRootDir: docs
-    enableFrontmatterTags: true
-    enableHashesForFMTags: false
-    enableRandomlyColoredTags: true
-    duplicateNoteBehavior:
-        action: useVault
-        payload:
-            - vault
     writeStubs: false
+    siteRootDir: docs
     seo:
         title: Dendron
         description: Personal knowledge space
@@ -106,6 +101,15 @@ publishing:
         editLinkText: Edit this page on GitHub
         editBranch: main
         editViewMode: tree
-    enablePrettyLinks: true
+    enableSiteLastModified: true
+    enableFrontmatterTags: true
+    enableHashesForFMTags: false
+    enableRandomlyColoredTags: true
     enableTaskNotes: true
+    enablePrettyLinks: true
     searchMode: lookup
+    duplicateNoteBehavior:
+        action: useVault
+        payload:
+            - private
+            - vault

@@ -2,6 +2,22 @@ version: 1
 imports: []
 schemas:
   - id: root
-    children: []
+    children: 
+      - p
+      - a
+      - r
+      - archive
     title: root
+    parent: root
+  - id: p
+    title: 1. Projects
+    parent: root
+  - id: a
+    title: 2. Areas
+    parent: root
+  - id: r
+    title: 3. Resources
+    parent: root
+  - id: archive
+    title: 4. Archive
     parent: root
