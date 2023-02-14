@@ -7,8 +7,7 @@ schemas:
       - a
       - r
       - archive
-    title: root
-    parent: root
+    title: Public
   - id: p
     title: 1. Projects
     parent: root
