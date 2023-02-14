@@ -23,7 +23,12 @@ commands:
     templateHierarchy: template
 workspace:
     vaults:
-
+        -
+            fsPath: private
+            remote:
+                type: git
+                url: https://github.com/BigHoss/private-notebook.git
+            name: private
         -
             name: public
             fsPath: vault
@@ -110,5 +115,5 @@ publishing:
     duplicateNoteBehavior:
         action: useVault
         payload:
-              - vault
-            
+            - vault
+            - private
