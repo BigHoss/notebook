@@ -1,6 +1,6 @@
 ---
 id: rsvFbaVPvhJGN1oo2dgIQ
-title: Csharaspx
+title: Aspx
 desc: Everything in here is asp.net(Webforms) specific
 updated: 1672674545625
 created: 1640939423614
