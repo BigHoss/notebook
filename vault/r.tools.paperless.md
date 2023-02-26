@@ -1,9 +1,10 @@
 ---
 id: d9tzel9uhis6pbe58wgil3g
 title: Paperless
-desc: ''
-updated: 1676745563572
+updated: 1677450621
 created: 1676745187832
+Tags: office
+desc: null
 ---
 
 [Docs](https://docs.paperless-ngx.com/)
