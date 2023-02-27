@@ -1,9 +1,10 @@
 ---
 id: 2t46akaqjmiv3oeaart33zs
 title: Rationale
-desc: ''
-updated: 1676744678771
+updated: 1677450642
 created: 1676744660318
+Tags: ai
+desc: null
 ---
 
 [Rationale.jina.ai](https://Rationale.jina.ai)
