@@ -2,9 +2,10 @@
 id: dygvailzhrlpfqjdpc9ll21
 title: 1. Delegates - Action and Func
 desc: Action and Func delegates in C#
-updated: 1672680315126
+updated: 1677772077641
 created: 1672673643315
 ---
+
 
 ## Abstract
 
